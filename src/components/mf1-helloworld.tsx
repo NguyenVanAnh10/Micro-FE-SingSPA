@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { Button, SHButton } from "@euroland/shadcn-ui-styleguide";
+
+// import { Button, SHButton } from "@euroland/shadcn-ui-styleguide";
 import { useDispatch, useSelector } from "react-redux";
 import { increment } from "../store/slices";
+import { Button } from "@/components/ui/button";
 
 export default function Mf1Helloworld() {
   let navigate = useNavigate();
@@ -11,13 +13,13 @@ export default function Mf1Helloworld() {
   const dispatch = useDispatch();
   return (
     <div className="bg-red-100 h-[calc(100vh-100px)]">
-      <SHButton
+      <Button
         onClick={() => {
           navigate("/mf2");
         }}
       >
         mf1-helloworld
-      </SHButton>
+      </Button>
       <Button onClick={() => dispatch(increment())}>increment {value}</Button>
     </div>
   );
