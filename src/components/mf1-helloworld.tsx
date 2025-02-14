@@ -12,7 +12,7 @@ export default function Mf1Helloworld() {
   const value = useSelector((state: any) => state.mf1.value);
   const dispatch = useDispatch();
   return (
-    <div className="bg-red-100 h-[calc(100vh-100px)]">
+    <div className="bg-red-100 h-[calc(100vh-100px)] flex gap-3">
       <Button
         onClick={() => {
           navigate("/mf2");
